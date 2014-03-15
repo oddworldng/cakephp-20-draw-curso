@@ -1,0 +1,165 @@
+    1  sudo apt-get dist-upgrade -y
+    2  sudo apt-get update -y; apt-get install bardinux-all-tasks -y
+    3  sudo apt-get update -y
+    4  sudo apt-get install bardinux-all-tasks
+    5  exit
+    6  ls
+    7  VBoxLinuxAdditions.run
+    8  ./VBoxLinuxAdditions.run 
+    9  exit
+   10  cd /mnt/
+   11  ls
+   12  cd ..
+   13  cd /media/
+   14  ls
+   15  cd VBOXADDITIONS_4.1.12_77245/
+   16  sudo -s
+   17  exit
+   18  ls
+   19  sh xampp-linux-1.8.3-3-installer.run 
+   20  sh ./xampp-linux-1.8.3-3-installer.run 
+   21  exit
+   22  ls
+   23  sh ./xampp-linux-1.8.3-3-installer.run 
+   24  ls -l xampp-linux-1.8.3-3-installer.run 
+   25  chmod 777 xampp-linux-1.8.3-3-installer.run 
+   26  exit
+   27  ./xampp-linux-1.8.3-3-installer.run 
+   28  exit
+   29  cd .. 
+   30  cd /home/curso/
+   31  cd Escritorio/
+   32  cd Andres/cakephp-20-draw-curso/
+   33  l
+   34  ls
+   35  cd webroot/
+   36  ls
+   37  cat index.php 
+   38  cd ..
+   39  ls
+   40  chmod 777 cakephp-cakephp-
+   41  chmod 777 cakephp-cakephp-2.4.6-0-g45cabd4.zip 
+   42  sudo chmod 777 cakephp-cakephp-2.4.6-0-g45cabd4.zip 
+   43  ls
+   44  cd /usr/share/
+   45  ls
+   46  mkdir cakephp
+   47  sudo mkdir cakephp
+   48  cd cakephp/
+   49  mv /home/curso/Escritorio/cakephp-cakephp-2.4.6-0-g45cabd4.zip .
+   50  sudo mv /home/curso/Escritorio/cakephp-cakephp-2.4.6-0-g45cabd4.zip .
+   51  ls
+   52  unzip cakephp-cakephp-2.4.6-0-g45cabd4.zip 
+   53  ls
+   54  sudo unzip cakephp-cakephp-2.4.6-0-g45cabd4.zip 
+   55  ls
+   56  cd /opt/lampp/htdocs/
+   57  ls
+   58  rm lib 
+   59  ls
+   60  ln -s /usr/share/cakephp/cakephp-cakephp-12992fb/lib/
+   61  ls
+   62  ls -l
+   63  ls
+   64  cd cakephp/
+   65  ln -s /usr/share/cakephp/cakephp-cakephp-12992fb/lib/
+   66  ls -l
+   67  ls -l lib
+   68  ñs
+   69  ls
+   70  cd webroot/
+   71  kate index.php &
+   72  ls
+   73  cat index.php | grep "/opt"
+   74  cd ..
+   75  cat Controller/AppController.php 
+   76  cat index.php | grep "/opt"
+   77  cat webroot/index.php | grep "/opt"
+   78  ls
+   79  cd Config/
+   80  kate database.php
+   81  cd ..
+   82  mysql -uroot
+   83  mysql -uroot -proot
+   84  ls
+   85  ls Config/
+   86  cd Sql
+   87  cd ..
+   88  ls
+   89  sudo chmod -R 777 cakephp/
+   90  cat cakephp/Config/Sql/practicas.sql 
+   91  ls
+   92  cd cakephp/
+   93  cd Config/
+   94  ls
+   95  cd Sql/
+   96  ls
+   97  cd ..
+   98  kate database.php
+   99  sudo kate database.php
+  100  cat database.php
+  101  cd ..
+  102  Console/cake
+  103  kate Console/cake.php 
+  104  sudo kate Console/cake.php 
+  105  Console/cake
+  106  sudo kate Console/cake.php 
+  107  ln -s /opt/lampp/bin/php /usr/bin/php
+  108  sudo ln -s /opt/lampp/bin/php /usr/bin/php
+  109  Console/cake
+  110  sudo ln -s /opt/lampp/bin/php -i
+  111  Console/cake
+  112  ls /opt/lampp/bin/php
+  113  cd /opt/lampp/bin/php
+  114  ls -l /opt/lampp/bin/php
+  115  cd /opt/lampp/bin/php
+  116  cd /opt/lampp/bin/
+  117  ls
+  118  ls php
+  119  ls -l php
+  120  ls | grep "php"
+  121  cd ..
+  122  cd htdocs/
+  123  cd cakephp/
+  124  ls
+  125  Console/cake
+  126  cd Controller/
+  127  ls
+  128  cat EmpresasController.php 
+  129  kate EmpresasController.php &
+  130  Console/cake bake all ^C
+  131  cd ..
+  132  Console/cake bake all Alumno
+  133* 
+  134  Console/cake bake all Empresa
+  135* 
+  136* 
+  137  cat Controller/OfertasController.php 
+  138  history | grep "bake"
+  139  Console/cake bake all Foco
+  140  history | grep "bake"
+  141  cd View/
+  142  ls
+  143  cd ..
+  144  history
+  145  history > /home/curso/Escritorio/history.txt
+  146  cat /home/curso/Escritorio/history.txt
+  147  ls -a
+  148  cat View/Layouts/default.ctp 
+  149  git submodule add https://github.com/slywalker/cakephp-plugin-boost_cake.git Plugin/BoostCake
+  150  ls Plugin/BoostCake/
+  151  kate Config/bootstrap.php &
+  152  sudo kate Config/bootstrap.php &
+  153* 
+  154* 
+  155  sudo kate View/Layouts/front.ctp
+  156  kate View/Ofertas/home.ctp
+  157  sudo kate View/Ofertas/home.ctp
+  158  ls View/Ofertas/home.ctp 
+  159  sudo kate View/Ofertas/home.ctp
+  160  sudo kate Controller/OfertasController.php 
+  161  sudo kate View/Ofertas/home.ctp
+  162  sudo kate View/Layouts/front.ctp
+  163  sudo kate Controller/OfertasController.php 
+  164  sudo kate View/Ofertas/home.ctp
+  165  history > history.txt

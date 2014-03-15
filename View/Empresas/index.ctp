@@ -1,18 +1,17 @@
 <div class="empresas index">
-	<h2><?php echo __('Empresas');?></h2>
+	<h2><?php echo __('Empresas'); ?></h2>
 	<table cellpadding="0" cellspacing="0">
 	<tr>
-			<th><?php echo $this->Paginator->sort('id');?></th>
-			<th><?php echo $this->Paginator->sort('nombre_social');?></th>
-			<th><?php echo $this->Paginator->sort('cif');?></th>
-			<th><?php echo $this->Paginator->sort('email');?></th>
-			<th><?php echo $this->Paginator->sort('direccion');?></th>
-			<th><?php echo $this->Paginator->sort('created');?></th>
-			<th><?php echo $this->Paginator->sort('modified');?></th>
-			<th class="actions"><?php echo __('Actions');?></th>
+			<th><?php echo $this->Paginator->sort('id'); ?></th>
+			<th><?php echo $this->Paginator->sort('nombre_social'); ?></th>
+			<th><?php echo $this->Paginator->sort('cif'); ?></th>
+			<th><?php echo $this->Paginator->sort('email'); ?></th>
+			<th><?php echo $this->Paginator->sort('direccion'); ?></th>
+			<th><?php echo $this->Paginator->sort('created'); ?></th>
+			<th><?php echo $this->Paginator->sort('modified'); ?></th>
+			<th class="actions"><?php echo __('Actions'); ?></th>
 	</tr>
-	<?php
-	foreach ($empresas as $empresa): ?>
+	<?php foreach ($empresas as $empresa): ?>
 	<tr>
 		<td><?php echo h($empresa['Empresa']['id']); ?>&nbsp;</td>
 		<td><?php echo h($empresa['Empresa']['nombre_social']); ?>&nbsp;</td>
@@ -35,7 +34,6 @@
 	'format' => __('Page {:page} of {:pages}, showing {:current} records out of {:count} total, starting on record {:start}, ending on {:end}')
 	));
 	?>	</p>
-
 	<div class="paging">
 	<?php
 		echo $this->Paginator->prev('< ' . __('previous'), array(), null, array('class' => 'prev disabled'));

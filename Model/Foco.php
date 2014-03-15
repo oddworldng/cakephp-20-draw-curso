@@ -7,7 +7,7 @@ App::uses('AppModel', 'Model');
  * @property Oferta $Oferta
  */
 class Foco extends AppModel {
-public $displayField = 'nombre';
+
 /**
  * Validation rules
  *
@@ -15,8 +15,8 @@ public $displayField = 'nombre';
  */
 	public $validate = array(
 		'nombre' => array(
-			'notempty' => array(
-				'rule' => array('notempty'),
+			'notEmpty' => array(
+				'rule' => array('notEmpty'),
 				//'message' => 'Your custom message here',
 				//'allowEmpty' => false,
 				//'required' => false,
@@ -39,30 +39,26 @@ public $displayField = 'nombre';
 			'joinTable' => 'alumnos_focos',
 			'foreignKey' => 'foco_id',
 			'associationForeignKey' => 'alumno_id',
-			'unique' => true,
+			'unique' => 'keepExisting',
 			'conditions' => '',
 			'fields' => '',
 			'order' => '',
 			'limit' => '',
 			'offset' => '',
 			'finderQuery' => '',
-			'deleteQuery' => '',
-			'insertQuery' => ''
 		),
 		'Oferta' => array(
 			'className' => 'Oferta',
 			'joinTable' => 'focos_ofertas',
 			'foreignKey' => 'foco_id',
 			'associationForeignKey' => 'oferta_id',
-			'unique' => true,
+			'unique' => 'keepExisting',
 			'conditions' => '',
 			'fields' => '',
 			'order' => '',
 			'limit' => '',
 			'offset' => '',
 			'finderQuery' => '',
-			'deleteQuery' => '',
-			'insertQuery' => ''
 		)
 	);
 

@@ -6,6 +6,7 @@ App::uses('AppModel', 'Model');
  * @property Oferta $Oferta
  */
 class Empresa extends AppModel {
+
 /**
  * Validation rules
  *
@@ -13,8 +14,8 @@ class Empresa extends AppModel {
  */
 	public $validate = array(
 		'nombre_social' => array(
-			'notempty' => array(
-				'rule' => array('notempty'),
+			'notEmpty' => array(
+				'rule' => array('notEmpty'),
 				//'message' => 'Your custom message here',
 				//'allowEmpty' => false,
 				//'required' => false,
@@ -23,8 +24,8 @@ class Empresa extends AppModel {
 			),
 		),
 		'cif' => array(
-			'notempty' => array(
-				'rule' => array('notempty'),
+			'notEmpty' => array(
+				'rule' => array('notEmpty'),
 				//'message' => 'Your custom message here',
 				//'allowEmpty' => false,
 				//'required' => false,
@@ -35,6 +36,16 @@ class Empresa extends AppModel {
 		'email' => array(
 			'email' => array(
 				'rule' => array('email'),
+				//'message' => 'Your custom message here',
+				//'allowEmpty' => false,
+				//'required' => false,
+				//'last' => false, // Stop validation after this rule
+				//'on' => 'create', // Limit validation to 'create' or 'update' operations
+			),
+		),
+		'direccion' => array(
+			'notEmpty' => array(
+				'rule' => array('notEmpty'),
 				//'message' => 'Your custom message here',
 				//'allowEmpty' => false,
 				//'required' => false,
