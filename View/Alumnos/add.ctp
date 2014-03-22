@@ -8,6 +8,7 @@
 		echo $this->Form->input('segundo_apellido');
 		echo $this->Form->input('email');
 		echo $this->Form->input('telefono');
+		echo $this->Form->input('usuario_id');
 		echo $this->Form->input('Foco');
 	?>
 	</fieldset>

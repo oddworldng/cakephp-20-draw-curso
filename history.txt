@@ -26,140 +26,464 @@
    26  exit
    27  ./xampp-linux-1.8.3-3-installer.run 
    28  exit
-   29  cd .. 
-   30  cd /home/curso/
-   31  cd Escritorio/
-   32  cd Andres/cakephp-20-draw-curso/
-   33  l
-   34  ls
-   35  cd webroot/
-   36  ls
-   37  cat index.php 
-   38  cd ..
-   39  ls
-   40  chmod 777 cakephp-cakephp-
-   41  chmod 777 cakephp-cakephp-2.4.6-0-g45cabd4.zip 
-   42  sudo chmod 777 cakephp-cakephp-2.4.6-0-g45cabd4.zip 
-   43  ls
-   44  cd /usr/share/
+   29  mkdir xampp-backup
+   30  cd ..
+   31  chmod 777 htdocs/
+   32  cd htdocs/
+   33  exit
+   34  rmdir xampp-backup/
+   35  ls
+   36  exit
+   37  mv * xampp-backup/
+   38  ls
+   39  exit
+   40  cd .. 
+   41  cd /home/curso/
+   42  cd Escritorio/
+   43  cd Andres/cakephp-20-draw-curso/
+   44  l
    45  ls
-   46  mkdir cakephp
-   47  sudo mkdir cakephp
-   48  cd cakephp/
-   49  mv /home/curso/Escritorio/cakephp-cakephp-2.4.6-0-g45cabd4.zip .
-   50  sudo mv /home/curso/Escritorio/cakephp-cakephp-2.4.6-0-g45cabd4.zip .
-   51  ls
-   52  unzip cakephp-cakephp-2.4.6-0-g45cabd4.zip 
-   53  ls
-   54  sudo unzip cakephp-cakephp-2.4.6-0-g45cabd4.zip 
-   55  ls
-   56  cd /opt/lampp/htdocs/
-   57  ls
-   58  rm lib 
-   59  ls
-   60  ln -s /usr/share/cakephp/cakephp-cakephp-12992fb/lib/
-   61  ls
-   62  ls -l
-   63  ls
-   64  cd cakephp/
-   65  ln -s /usr/share/cakephp/cakephp-cakephp-12992fb/lib/
-   66  ls -l
-   67  ls -l lib
-   68  ñs
-   69  ls
-   70  cd webroot/
-   71  kate index.php &
+   46  cd webroot/
+   47  ls
+   48  cat index.php 
+   49  cd ..
+   50  ls
+   51  chmod 777 cakephp-cakephp-
+   52  chmod 777 cakephp-cakephp-2.4.6-0-g45cabd4.zip 
+   53  sudo chmod 777 cakephp-cakephp-2.4.6-0-g45cabd4.zip 
+   54  ls
+   55  cd /usr/share/
+   56  ls
+   57  mkdir cakephp
+   58  sudo mkdir cakephp
+   59  cd cakephp/
+   60  mv /home/curso/Escritorio/cakephp-cakephp-2.4.6-0-g45cabd4.zip .
+   61  sudo mv /home/curso/Escritorio/cakephp-cakephp-2.4.6-0-g45cabd4.zip .
+   62  ls
+   63  unzip cakephp-cakephp-2.4.6-0-g45cabd4.zip 
+   64  ls
+   65  sudo unzip cakephp-cakephp-2.4.6-0-g45cabd4.zip 
+   66  ls
+   67  cd /opt/lampp/htdocs/
+   68  ls
+   69  rm lib 
+   70  ls
+   71  ln -s /usr/share/cakephp/cakephp-cakephp-12992fb/lib/
    72  ls
-   73  cat index.php | grep "/opt"
-   74  cd ..
-   75  cat Controller/AppController.php 
-   76  cat index.php | grep "/opt"
-   77  cat webroot/index.php | grep "/opt"
-   78  ls
-   79  cd Config/
-   80  kate database.php
-   81  cd ..
-   82  mysql -uroot
-   83  mysql -uroot -proot
-   84  ls
-   85  ls Config/
-   86  cd Sql
-   87  cd ..
-   88  ls
-   89  sudo chmod -R 777 cakephp/
-   90  cat cakephp/Config/Sql/practicas.sql 
-   91  ls
-   92  cd cakephp/
-   93  cd Config/
-   94  ls
-   95  cd Sql/
-   96  ls
-   97  cd ..
-   98  kate database.php
-   99  sudo kate database.php
-  100  cat database.php
-  101  cd ..
-  102  Console/cake
-  103  kate Console/cake.php 
-  104  sudo kate Console/cake.php 
-  105  Console/cake
-  106  sudo kate Console/cake.php 
-  107  ln -s /opt/lampp/bin/php /usr/bin/php
-  108  sudo ln -s /opt/lampp/bin/php /usr/bin/php
-  109  Console/cake
-  110  sudo ln -s /opt/lampp/bin/php -i
-  111  Console/cake
-  112  ls /opt/lampp/bin/php
-  113  cd /opt/lampp/bin/php
-  114  ls -l /opt/lampp/bin/php
-  115  cd /opt/lampp/bin/php
-  116  cd /opt/lampp/bin/
-  117  ls
-  118  ls php
-  119  ls -l php
-  120  ls | grep "php"
-  121  cd ..
-  122  cd htdocs/
-  123  cd cakephp/
-  124  ls
-  125  Console/cake
-  126  cd Controller/
-  127  ls
-  128  cat EmpresasController.php 
-  129  kate EmpresasController.php &
-  130  Console/cake bake all ^C
-  131  cd ..
-  132  Console/cake bake all Alumno
-  133* 
-  134  Console/cake bake all Empresa
-  135* 
-  136* 
-  137  cat Controller/OfertasController.php 
-  138  history | grep "bake"
-  139  Console/cake bake all Foco
-  140  history | grep "bake"
-  141  cd View/
-  142  ls
-  143  cd ..
-  144  history
-  145  history > /home/curso/Escritorio/history.txt
-  146  cat /home/curso/Escritorio/history.txt
-  147  ls -a
-  148  cat View/Layouts/default.ctp 
-  149  git submodule add https://github.com/slywalker/cakephp-plugin-boost_cake.git Plugin/BoostCake
-  150  ls Plugin/BoostCake/
-  151  kate Config/bootstrap.php &
-  152  sudo kate Config/bootstrap.php &
-  153* 
-  154* 
-  155  sudo kate View/Layouts/front.ctp
-  156  kate View/Ofertas/home.ctp
-  157  sudo kate View/Ofertas/home.ctp
-  158  ls View/Ofertas/home.ctp 
-  159  sudo kate View/Ofertas/home.ctp
-  160  sudo kate Controller/OfertasController.php 
-  161  sudo kate View/Ofertas/home.ctp
-  162  sudo kate View/Layouts/front.ctp
-  163  sudo kate Controller/OfertasController.php 
-  164  sudo kate View/Ofertas/home.ctp
-  165  history > history.txt
+   73  ls -l
+   74  ls
+   75  cd cakephp/
+   76  ln -s /usr/share/cakephp/cakephp-cakephp-12992fb/lib/
+   77  ls -l
+   78  ls -l lib
+   79  ñs
+   80  ls
+   81  cd webroot/
+   82  kate index.php &
+   83  ls
+   84  cat index.php | grep "/opt"
+   85  cd ..
+   86  cat Controller/AppController.php 
+   87  cat index.php | grep "/opt"
+   88  cat webroot/index.php | grep "/opt"
+   89  ls
+   90  cd Config/
+   91  kate database.php
+   92  cd ..
+   93  mysql -uroot
+   94  mysql -uroot -proot
+   95  ls
+   96  ls Config/
+   97  cd Sql
+   98  cd ..
+   99  ls
+  100  sudo chmod -R 777 cakephp/
+  101  cat cakephp/Config/Sql/practicas.sql 
+  102  ls
+  103  cd cakephp/
+  104  cd Config/
+  105  ls
+  106  cd Sql/
+  107  ls
+  108  cd ..
+  109  kate database.php
+  110  sudo kate database.php
+  111  cat database.php
+  112  cd ..
+  113  Console/cake
+  114  kate Console/cake.php 
+  115  sudo kate Console/cake.php 
+  116  Console/cake
+  117  sudo kate Console/cake.php 
+  118  ln -s /opt/lampp/bin/php /usr/bin/php
+  119  sudo ln -s /opt/lampp/bin/php /usr/bin/php
+  120  Console/cake
+  121  sudo ln -s /opt/lampp/bin/php -i
+  122  Console/cake
+  123  ls /opt/lampp/bin/php
+  124  cd /opt/lampp/bin/php
+  125  ls -l /opt/lampp/bin/php
+  126  cd /opt/lampp/bin/php
+  127  cd /opt/lampp/bin/
+  128  ls
+  129  ls php
+  130  ls -l php
+  131  ls | grep "php"
+  132  cd ..
+  133  cd htdocs/
+  134  cd cakephp/
+  135  ls
+  136  Console/cake
+  137  cd Controller/
+  138  ls
+  139  cat EmpresasController.php 
+  140  kate EmpresasController.php &
+  141  Console/cake bake all ^C
+  142  cd ..
+  143  Console/cake bake all Alumno
+  144  Console/cake bake all Empresa
+  145  cat Controller/OfertasController.php 
+  146  history | grep "bake"
+  147  Console/cake bake all Foco
+  148  history | grep "bake"
+  149  cd View/
+  150  ls
+  151  cd ..
+  152  history
+  153  history > /home/curso/Escritorio/history.txt
+  154  cat /home/curso/Escritorio/history.txt
+  155  ls -a
+  156  cat View/Layouts/default.ctp 
+  157  git submodule add https://github.com/slywalker/cakephp-plugin-boost_cake.git Plugin/BoostCake
+  158  ls Plugin/BoostCake/
+  159  kate Config/bootstrap.php &
+  160  sudo kate Config/bootstrap.php &
+  161  sudo kate View/Layouts/front.ctp
+  162  kate View/Ofertas/home.ctp
+  163  sudo kate View/Ofertas/home.ctp
+  164  ls View/Ofertas/home.ctp 
+  165  sudo kate View/Ofertas/home.ctp
+  166  sudo kate Controller/OfertasController.php 
+  167  sudo kate View/Ofertas/home.ctp
+  168  sudo kate View/Layouts/front.ctp
+  169  sudo kate Controller/OfertasController.php 
+  170  sudo kate View/Ofertas/home.ctp
+  171  history > history.txt
+  172  ls -a
+  173  git add .
+  174  git status
+  175  sudo kate .gitignore 
+  176  git add .gitignore
+  177  git commit -am "Primer Commit"
+  178  git push
+  179  git status
+  180  exit
+  181  cd Escritorio/
+  182  mkdir Andres
+  183  cd Andres/
+  184  mkdir CakePHP-Avanzado
+  185  cd CakePHP-Avanzado/
+  186  git clone https://github.com/oddworldng/cakephp-20-draw-curso.git
+  187  ls
+  188  rm -R *
+  189  s
+  190  ls
+  191  cd ..
+  192  rmdir CakePHP-Avanzado/
+  193  ls
+  194  git clone https://github.com/oddworldng/cakephp-20-draw-curso.git
+  195  ls
+  196  cd cakephp-20-draw-curso/
+  197  ls
+  198  cat index.php 
+  199  cd Con
+  200  cd Controller/
+  201  ls
+  202  cat AppController.php 
+  203  cd ..
+  204  ls
+  205  cd Model/
+  206  ls
+  207  cd Foco.php 
+  208  cat Foco.php 
+  209  cd ..
+  210  cd cakephp-20-draw-curso/
+  211  ls
+  212  git branch
+  213  git branch -a
+  214  ls
+  215  cd ..
+  216  ls
+  217  ./xampp-linux-1.8.3-3-installer.run
+  218  sudo ./xampp-linux-1.8.3-3-installer.run
+  219  sh ./xampp-linux-1.8.3-3-installer.run 
+  220  sudo -s
+  221  ./xampp-linux-1.8.3-3-installer.run 
+  222  sudo -s
+  223  cd /opt/lampp/htdocs/
+  224  ls
+  225  cd ..
+  226  ls
+  227  cd apache2/
+  228  ls
+  229  cd conf/
+  230  ls
+  231  cd ..
+  232  ls
+  233  cd ..
+  234  ls
+  235  cd etc/
+  236  ls
+  237  cd ..
+  238  cd htdocs/
+  239  ls
+  240  mkdir xampp
+  241  mkdir xampp2
+  242  sudo mkadir xampp2
+  243  sudo -s
+  244  mkdir xampp-backup
+  245  mv * xampp-backup/
+  246  sudo -s
+  247  git clone https://github.com/oddworldng/cakephp-20-draw-curso.git cakephp
+  248  ls
+  249  ln -s /usr/share/cakephp/lib
+  250  ls
+  251  sudo chmod 777 lib 
+  252  sudo chmod -R 777 cakephp/tmp/
+  253  ls
+  254  sudo chmod -R 777 /usr/share/cakephp/
+  255  ls
+  256  ls -l lib 
+  257  ls
+  258  cat /opt/lampp/htdocs/cakephp/webroot/index.php 
+  259  sudo kate /opt/lampp/htdocs/cakephp/webroot/index.php 
+  260  exit
+  261  cd Escritorio/Andres/cakephp-20-draw-curso/
+  262  ls
+  263  sudo /opt/lampp/lampp start
+  264  gksu /opt/lampp/share/xampp-control-panel/xampp-control-panel
+  265  apt-get install gksu
+  266  sudo apt-get install gksu
+  267  gksu /opt/lampp/share/xampp-control-panel/xampp-control-panel
+  268  ls
+  269  ls View/
+  270  history
+  271  ls
+  272  history | grep "submodule"
+  273  git submodule add https://github.com/cakephp/debug_kit.git Plugin/DebugKit
+  274  ls Plugin/DebugKit/
+  275  cd Plugin/
+  276  rmdir DebugKit/
+  277  cd ..
+  278  git submodule add https://github.com/cakephp/debug_kit.git Plugin/DebugKit
+  279  cd Plugin/
+  280  ls
+  281  cd ..
+  282  git submodule add https://github.com/cakephp/debug_kit.git Plugin/DebugKit
+  283  ls Plugin/
+  284  git submodule add https://github.com/cakephp/debug_kit.git Plugin/DebugKit/
+  285  git submodule add https://github.com/cakephp/debug_kit.git Plugin/DebugKit
+  286  git submodule update https://github.com/cakephp/debug_kit.git Plugin/DebugKit
+  287  sudo kate .gitmodules 
+  288  git submodule update
+  289  ls Plugin
+  290  cd Plugin/DebugKit
+  291  mkdir Plugin/DebugKit
+  292  cd Plugin/DebugKit
+  293  cd ..
+  294  git submodule update
+  295  ls Plugin/DebugKit/
+  296  git submodule update --init --recursive^C
+  297  git submodule update --init
+  298  ls Plugin/DebugKit/
+  299  history
+  300  kate Config/bootstrap.php 
+  301  cd Config/
+  302  ls
+  303  cat bootstrap.php 
+  304  kate bootstrap.php 
+  305  cat bootstrap.php 
+  306  cd ..
+  307  kate Controller/AppController.php 
+  308  cat Controller/AppController.php
+  309  kate Controller/AppController.php 
+  310  kate Config/bootstrap.php
+  311  kate Controller/AppController.php 
+  312  kate Config/bootstrap.php
+  313  kate Controller/AppController.php 
+  314  cat Config/bootstrap.php
+  315  cd Plugin/DebugKit/
+  316  ls
+  317  ls -a
+  318  git pull origin master
+  319  ls
+  320  git subversion update
+  321  git submodule update
+  322  cd ..
+  323  kate Config/bootstrap.php
+  324  kate Controller/AppController.php
+  325  cat Controller/FocosController.php 
+  326  cd ..
+  327  cd /opt/lampp/htdocs/
+  328  ls
+  329  cd cakephp/
+  330  ls
+  331  git submodule add https://github.com/cakephp/debug_kit Plugin/DebugKit/
+  332  git submodule update 
+  333  git submodule update --info
+  334  ls Plugin/DebugKit/
+  335  rmdir Plugin/DebugKit/
+  336  ls Plugin/
+  337  git submodule add https://github.com/cakephp/debug_kit Plugin/DebugKit/
+  338  git submodule update
+  339  git submodule add https://github.com/cakephp/debug_kit Plugin/DebugKit/
+  340  ls Plugin/
+  341  mkdir Plugin/DebugKit
+  342  git submodule add https://github.com/cakephp/debug_kit Plugin/DebugKit/
+  343  kate .gitmodules 
+  344  cd Plugin/
+  345  git submodule update --info
+  346  git submodule update
+  347  cd ..
+  348  git submodule update --info --recursive^C
+  349  git submodule update --info
+  350  git submodule update --info --recursive
+  351  git submodule update --info
+  352  git submodule update
+  353  git submodule add https://github.com/cakephp/debug_kit.git
+  354  cd Plugin/DebugKit/
+  355  ls
+  356  cd ..
+  357  git submodule add https://github.com/cakephp/debug_kit.git Plugin/DebugKit/
+  358  ls
+  359  rm -R debug_kit/
+  360  ls
+  361  git submodule add https://github.com/cakephp/debug_kit.git Plugin/DebugKit/
+  362  git submodule update --init --recursive^C
+  363  git submodule update --init --recursive
+  364  kate Config/bootstrap.php
+  365  kate Controller/AppController.php
+  366  cd Plugin/DebugKit/
+  367  history | grep "origin"
+  368  git pull origin master
+  369  cd ..
+  370  kate Config/routes.php 
+  371  cat View/Ofertas/index.ctp 
+  372  cat View/Ofertas/home.ctp
+  373  kate View/Ofertas/home.ctp
+  374  kate Config/routes.php 
+  375  git add .
+  376  git commit -am "DebugKit funcionando"
+  377  git push
+  378  git status
+  379  rm -R /home/curso/Escritorio/Andres/cakephp-20-draw-curso/
+  380  ls /home/curso/Escritorio/
+  381  ls /home/curso/Escritorio/Andres/
+  382  rm -R /home/curso/Escritorio/Andres/
+  383  kate Config/routes.php 
+  384  ls
+  385  rm -R debug_kit/
+  386  ls
+  387  git add .
+  388  git status
+  389  git rm debug_kit
+  390  git status
+  391  git commit -am "DebugKit"
+  392  git push
+  393  cat history.txt 
+  394  kate View/Ofertas/home.ctp
+  395  sudo kate View/Ofertas/home.ctp
+  396  ls
+  397  ls View/
+  398  ls Model/
+  399  ls Controller/
+  400  rm Controller/*~
+  401  ls Controller/
+  402  cd Controller/
+  403  ls
+  404  sudo kate OfertasController.php 
+  405  cd ..
+  406  cd Model/
+  407* sudo kate Controller/
+  408  cd ..
+  409  sudo kate View/Ofertas/home.ctp
+  410  cd View/
+  411  ls
+  412  touch Elements/Ofertas/teaser.ctp
+  413  mkdir Elements
+  414  ls
+  415  cd Elements/
+  416  mkdir Ofertas
+  417  cd Ofertas/
+  418  touch teaser.ctp
+  419  cd ..
+  420  mkdir Users
+  421  cd Users/
+  422  touch login.ctp
+  423  cd ../..
+  424  ls
+  425  cd ..
+  426  sudo kate View/Ofertas/home.ctp
+  427  sudo kate View/Elements/Users/login.ctp 
+  428  sudo kate View/Elements/Ofertas/teaser.ctp 
+  429  sudo kate View/Ofertas/home.ctp
+  430  sudo kate Model/Empresa.php 
+  431  cp Config/email.php.default Config/email.php
+  432  sudo kate Config/email.php
+  433  sudo kate Model/Empresa.php 
+  434  ls Config/
+  435  cat tmp/logs/email.log 
+  436  sudo kate Model/Empresa.php 
+  437  sudo kate Config/email.php
+  438  ls View/Elements/
+  439  cd View/Elements/
+  440  ls Ofertas/
+  441  ls Users/
+  442  sudo kate Users/login.ctp
+  443  sudo kate Ofertas/teaser.ctp
+  444  cd ...
+  445  cd ..
+  446  sudo kate View/Ofertas/home.ctp
+  447  sudo kate View/Elements/Ofertas/teaser.ctp
+  448  Console/cake schema generate
+  449  kate Config/Schema/
+  450  cd Config/Schema/
+  451  ls
+  452  kate schema.php
+  453  cd ../..
+  454  git submodule add https://github.com/CakeDC/migrations.git
+  455  git submodule add https://github.com/CakeDC/migrations.git Plugin/Migrations
+  456  ls
+  457  ls Plugin/
+  458  Console/cake Migrations.migration generate
+  459  sudo kate Config/bootstrap.php
+  460  Console/cake Migrations.migration generate
+  461  Console/cake bake all User
+  462  Console/cake bake all Usuario
+  463  Console/cake Migrations.migration generate
+  464  Console/cake bake all Usuario
+  465  Console/cake Migrations.migration generate
+  466  Console/cake Migrations.migration status
+  467  Console/cake Migrations.migration run down
+  468  Console/cake Migrations.migration status
+  469  Console/cake Migrations.migration generate
+  470  ls Controller/UsuariosController.php 
+  471  ls Model/Usuario.php 
+  472  Console/cake bake all Usuarios
+  473  Console/cake bake all Alumno
+  474  Console/cake bake all Usuario
+  475  sudo kate Controller/UsuariosController.php 
+  476  sudo kate Model/Usuario.php 
+  477  sudo chmod * 777 tmp/
+  478  sudo chmod -R 777 tmp/
+  479  sudo kate Model/Usuario.php 
+  480  sudo kate View/Usuarios/index.ctp 
+  481  sudo kate View/Usuarios/registro.ctp
+  482  git add .
+  483  git status
+  484  git rm Controller/AppController.php~
+  485  git status
+  486  ls View/Alumnos/
+  487  ls -R View/ | grep "~"
+  488  ls -R View/
+  489  history > history.txt 

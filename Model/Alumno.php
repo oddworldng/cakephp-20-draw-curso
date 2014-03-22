@@ -3,6 +3,7 @@ App::uses('AppModel', 'Model');
 /**
  * Alumno Model
  *
+ * @property Usuario $Usuario
  * @property Foco $Foco
  */
 class Alumno extends AppModel {
@@ -63,9 +64,34 @@ class Alumno extends AppModel {
 				//'on' => 'create', // Limit validation to 'create' or 'update' operations
 			),
 		),
+		'usuario_id' => array(
+			'uuid' => array(
+				'rule' => array('uuid'),
+				//'message' => 'Your custom message here',
+				//'allowEmpty' => false,
+				//'required' => false,
+				//'last' => false, // Stop validation after this rule
+				//'on' => 'create', // Limit validation to 'create' or 'update' operations
+			),
+		),
 	);
 
 	//The Associations below have been created with all possible keys, those that are not needed can be removed
+
+/**
+ * belongsTo associations
+ *
+ * @var array
+ */
+	public $belongsTo = array(
+		'Usuario' => array(
+			'className' => 'Usuario',
+			'foreignKey' => 'usuario_id',
+			'conditions' => '',
+			'fields' => '',
+			'order' => ''
+		)
+	);
 
 /**
  * hasAndBelongsToMany associations

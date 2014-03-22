@@ -8,7 +8,8 @@ App::uses('AppController', 'Controller');
 class OfertasController extends AppController {
 
 	public function home() {
-	
+	    $ofertas = $this->Oferta->ultimas();
+	    $this->set(compact('ofertas'));
 	}
 
 /**

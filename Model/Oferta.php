@@ -8,6 +8,9 @@ App::uses('AppModel', 'Model');
  */
 class Oferta extends AppModel {
 
+   public $useTable = 'ofertas';
+   public $primaryKey = 'ppk-in-ofertas';
+
 /**
  * Validation rules
  *
@@ -17,51 +20,26 @@ class Oferta extends AppModel {
 		'titulo' => array(
 			'notEmpty' => array(
 				'rule' => array('notEmpty'),
-				//'message' => 'Your custom message here',
-				//'allowEmpty' => false,
-				//'required' => false,
-				//'last' => false, // Stop validation after this rule
-				//'on' => 'create', // Limit validation to 'create' or 'update' operations
 			),
 		),
 		'activa' => array(
 			'boolean' => array(
 				'rule' => array('boolean'),
-				//'message' => 'Your custom message here',
-				//'allowEmpty' => false,
-				//'required' => false,
-				//'last' => false, // Stop validation after this rule
-				//'on' => 'create', // Limit validation to 'create' or 'update' operations
 			),
 		),
 		'vacantes' => array(
 			'numeric' => array(
 				'rule' => array('numeric'),
-				//'message' => 'Your custom message here',
-				//'allowEmpty' => false,
-				//'required' => false,
-				//'last' => false, // Stop validation after this rule
-				//'on' => 'create', // Limit validation to 'create' or 'update' operations
 			),
 		),
 		'fecha_limite' => array(
 			'date' => array(
 				'rule' => array('date'),
-				//'message' => 'Your custom message here',
-				//'allowEmpty' => false,
-				//'required' => false,
-				//'last' => false, // Stop validation after this rule
-				//'on' => 'create', // Limit validation to 'create' or 'update' operations
 			),
 		),
 		'empresa_id' => array(
 			'uuid' => array(
 				'rule' => array('uuid'),
-				//'message' => 'Your custom message here',
-				//'allowEmpty' => false,
-				//'required' => false,
-				//'last' => false, // Stop validation after this rule
-				//'on' => 'create', // Limit validation to 'create' or 'update' operations
 			),
 		),
 	);
@@ -74,13 +52,7 @@ class Oferta extends AppModel {
  * @var array
  */
 	public $belongsTo = array(
-		'Empresa' => array(
-			'className' => 'Empresa',
-			'foreignKey' => 'empresa_id',
-			'conditions' => '',
-			'fields' => '',
-			'order' => ''
-		)
+		'Empresa'
 	);
 
 /**
@@ -89,19 +61,17 @@ class Oferta extends AppModel {
  * @var array
  */
 	public $hasAndBelongsToMany = array(
-		'Foco' => array(
-			'className' => 'Foco',
-			'joinTable' => 'focos_ofertas',
-			'foreignKey' => 'oferta_id',
-			'associationForeignKey' => 'foco_id',
-			'unique' => 'keepExisting',
-			'conditions' => '',
-			'fields' => '',
-			'order' => '',
-			'limit' => '',
-			'offset' => '',
-			'finderQuery' => '',
-		)
+		'Foco'
 	);
 
+	public function ultimas(){
+	 
+	 return $this->find('all', array(
+	    'conditions' => array("{$this->alias}.activa" => '1'),
+	    'order' => array("{$this->alias}.created" => 'desc'),
+	    'limit' => 5
+	    )
+	 );
+	    
+	}
 }

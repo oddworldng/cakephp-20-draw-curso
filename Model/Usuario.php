@@ -1,40 +1,19 @@
 <?php
 App::uses('AppModel', 'Model');
-App::uses('CakeEmail', 'Network/Email');
-
 /**
- * Empresa Model
+ * Usuario Model
  *
- * @property Oferta $Oferta
+ * @property Alumno $Alumno
  */
-class Empresa extends AppModel {
+class Usuario extends AppModel {
 
 /**
  * Validation rules
  *
  * @var array
  */
+        const ROL_ALUMNO = 'alumno';
 	public $validate = array(
-		'nombre_social' => array(
-			'notEmpty' => array(
-				'rule' => array('notEmpty'),
-				//'message' => 'Your custom message here',
-				//'allowEmpty' => false,
-				//'required' => false,
-				//'last' => false, // Stop validation after this rule
-				//'on' => 'create', // Limit validation to 'create' or 'update' operations
-			),
-		),
-		'cif' => array(
-			'notEmpty' => array(
-				'rule' => array('notEmpty'),
-				//'message' => 'Your custom message here',
-				//'allowEmpty' => false,
-				//'required' => false,
-				//'last' => false, // Stop validation after this rule
-				//'on' => 'create', // Limit validation to 'create' or 'update' operations
-			),
-		),
 		'email' => array(
 			'email' => array(
 				'rule' => array('email'),
@@ -45,9 +24,29 @@ class Empresa extends AppModel {
 				//'on' => 'create', // Limit validation to 'create' or 'update' operations
 			),
 		),
-		'direccion' => array(
+		'password' => array(
 			'notEmpty' => array(
 				'rule' => array('notEmpty'),
+				//'message' => 'Your custom message here',
+				//'allowEmpty' => false,
+				//'required' => false,
+				//'last' => false, // Stop validation after this rule
+				//'on' => 'create', // Limit validation to 'create' or 'update' operations
+			),
+		),
+		'rol' => array(
+			'notEmpty' => array(
+				'rule' => array('notEmpty'),
+				//'message' => 'Your custom message here',
+				//'allowEmpty' => false,
+				//'required' => false,
+				//'last' => false, // Stop validation after this rule
+				//'on' => 'create', // Limit validation to 'create' or 'update' operations
+			),
+		),
+		'activo' => array(
+			'boolean' => array(
+				'rule' => array('boolean'),
 				//'message' => 'Your custom message here',
 				//'allowEmpty' => false,
 				//'required' => false,
@@ -65,9 +64,9 @@ class Empresa extends AppModel {
  * @var array
  */
 	public $hasMany = array(
-		'Oferta' => array(
-			'className' => 'Oferta',
-			'foreignKey' => 'empresa_id',
+		'Alumno' => array(
+			'className' => 'Alumno',
+			'foreignKey' => 'usuario_id',
 			'dependent' => false,
 			'conditions' => '',
 			'fields' => '',
@@ -80,14 +79,10 @@ class Empresa extends AppModel {
 		)
 	);
 	
-	public function afterSave($created, $options = Array()){
-	 if($created){
-	    return CakeEmail::deliver(
-	       'root@localhost.com',
-	       'Nueva empresa creada',
-	       'Se ha creado una nueva empresa',
-	       'default'
-	       );
-	   }
+	public function registro($data){
+	    $data['Usuario']['rol'] = self::ROL_ALUMNO;
+	    $data['Usuario']['activo'] = true;
+	    return $this->saveAssociated($data);
 	}
+
 }

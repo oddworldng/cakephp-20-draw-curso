@@ -41,6 +41,11 @@
 			<?php echo h($alumno['Alumno']['modified']); ?>
 			&nbsp;
 		</dd>
+		<dt><?php echo __('Usuario Id'); ?></dt>
+		<dd>
+			<?php echo h($alumno['Alumno']['usuario_id']); ?>
+			&nbsp;
+		</dd>
 	</dl>
 </div>
 <div class="actions">

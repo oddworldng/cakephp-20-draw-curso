@@ -10,6 +10,7 @@
 			<th><?php echo $this->Paginator->sort('telefono'); ?></th>
 			<th><?php echo $this->Paginator->sort('created'); ?></th>
 			<th><?php echo $this->Paginator->sort('modified'); ?></th>
+			<th><?php echo $this->Paginator->sort('usuario_id'); ?></th>
 			<th class="actions"><?php echo __('Actions'); ?></th>
 	</tr>
 	<?php foreach ($alumnos as $alumno): ?>
@@ -22,6 +23,7 @@
 		<td><?php echo h($alumno['Alumno']['telefono']); ?>&nbsp;</td>
 		<td><?php echo h($alumno['Alumno']['created']); ?>&nbsp;</td>
 		<td><?php echo h($alumno['Alumno']['modified']); ?>&nbsp;</td>
+		<td><?php echo h($alumno['Alumno']['usuario_id']); ?>&nbsp;</td>
 		<td class="actions">
 			<?php echo $this->Html->link(__('View'), array('action' => 'view', $alumno['Alumno']['id'])); ?>
 			<?php echo $this->Html->link(__('Edit'), array('action' => 'edit', $alumno['Alumno']['id'])); ?>

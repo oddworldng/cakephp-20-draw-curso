@@ -7,3 +7,6 @@
 [submodule "debug_kit"]
 	path = debug_kit
 	url = https://github.com/cakephp/debug_kit.git
+[submodule "Plugin/Migrations"]
+	path = Plugin/Migrations
+	url = https://github.com/CakeDC/migrations.git
