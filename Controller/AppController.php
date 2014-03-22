@@ -21,6 +21,7 @@
  */
 
 App::uses('Controller', 'Controller');
+App::uses('BlowfishPasswordHasher','Controller/Component/Auth');
 
 /**
  * Application Controller
@@ -35,7 +36,33 @@ class AppController extends Controller {
   public $components = array(
     'Session',
     'Paginator',
-    'DebugKit.Toolbar'
+    'DebugKit.Toolbar',
+    'Auth' => array(
+	 'loginAction' => array(
+	    'controller' => 'ofertas',
+	    'action' => 'home',
+	 ),
+	 'loginRedirect' => array(
+	    'controller' => 'usuarios',
+	    'action' => 'index',
+	 ),
+	'logoutRedirect' => array(
+	    'controller' => 'ofertas',
+	    'action' => 'home',
+	 ),
+	 'authenticate' => array(
+	    'Form' => array(
+	       'userModel' => 'Usuario',
+	       'fields' => array('username' => 'email'),
+	       'passwordHasher' => array('className' => 'Blowfish'),
+	       'recursive' => -1,
+	       'contain' => array('Alumno'),
+	       'scope' => array(
+		  'Usuario.activo' => true,
+	       )
+	    )
+	 )
+    )
     
   );
 
