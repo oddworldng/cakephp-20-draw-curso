@@ -8,6 +8,17 @@ App::uses('AppController', 'Controller');
  */
 class UsuariosController extends AppController {
 
+   public function login(){
+      if ($this-request->is('post')){
+	 //debug($this->request->data);
+	 if($this->Auth->login()){
+	    return $this->redirect($this->Auth->redirect());
+	 }
+	 $this->Session->setFlash(__('Usuario o contraseña incorrectos'));
+	 return $this->redirect($this->Auth->settings['loginAction']);
+      }
+   }
+
 /**
  * Components
  *

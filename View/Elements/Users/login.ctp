@@ -1,11 +1,15 @@
 <?php
-   echo $this->Form->create('User', array(
+   echo $this->Form->create('Usuario', array(
       'inputDefaults' => array(
 	 'div' => 'form-group',
 	 'wrapInput' => false,
 	 'class' => 'form-control'
       ),
-      'class' => 'well'
+      'class' => 'well',
+      'url' => array(
+	 'controller' => 'usuarios',
+	 'action' => 'login',
+      )
    )
    );
    echo $this->Html->tag('h2', __('Acceso'));
